@@ -2,4 +2,4 @@
 
 My Portfolio Website.
 
-www.nasromar.com
+www.nasr.ai

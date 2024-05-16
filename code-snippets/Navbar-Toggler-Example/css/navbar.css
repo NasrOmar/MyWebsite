@@ -1,0 +1,208 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+body {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-size: 16px;
+}
+
+
+#navbar {
+	width: 100%;
+	height: 60px; 
+	position: fixed;
+	top: 0; 
+	left: 0; 
+	background-color: #F6F0ED;
+	-webkit-box-shadow: 0px 2px 4px 0 #A49E8D;
+	        box-shadow: 0px 2px 4px 0 #A49E8D;
+}
+
+#navbar-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	padding: 18.5px;
+	font-size: 20px;
+}
+
+#logo a {
+	text-decoration: none;
+	color: #C2948A;
+}
+
+.nav-items-ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	list-style-type: none;
+}
+
+.nav-links {
+	text-decoration: none;
+	margin: 0 30px;
+	padding: 4px;
+	color: #7EA8BE;
+	width: 100%;
+	-webkit-transition: color .2s ease-out;
+	-o-transition: color .2s ease-out;
+	transition: color .2s ease-out;
+}
+
+.nav-links-active {
+	color: #28536B;
+}
+
+.nav-links:hover {
+	color: #BBB193;
+}
+
+#navbar-toggler {
+	display: none;
+}
+
+#main-content {
+	margin-top: 60px;
+	height: 250px;
+	background-color:#E3E3E3;
+	text-align: center;
+}
+
+#footer {
+	height: 50px;
+	background-color: #F6F0ED;
+	text-align: center;
+}
+@media screen and (max-width: 768px) {
+	
+	#navbar-toggler {
+		display: inline-block;
+		position: relative;
+		cursor: pointer;
+		padding: 10px 0;
+	}
+
+	.navbar-toggler-btn {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 5px;
+		background-color: #28536B;
+		border-radius: 10px;
+		-webkit-transition: all .2s ease-out;
+		-o-transition: all .2s ease-out;
+		transition: all .2s ease-out;
+	}
+
+	.navbar-toggler-btn:before,.navbar-toggler-btn:after {
+		display: block;
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		background-color: #28536B;
+		border-radius: 10px;
+		-webkit-transition: all .2s ease-out;
+		-o-transition: all .2s ease-out;
+		transition: all .2s ease-out;
+	}
+
+	.navbar-toggler-btn:before {
+		top: 10px;
+	}
+
+	.navbar-toggler-btn:after {
+		top: -10px;
+	}
+	
+	.navbar-toggler-btn-x .navbar-toggler-btn {
+		background: transparent;
+	}
+	
+	.navbar-toggler-btn-x .navbar-toggler-btn:before {
+		-webkit-transform: rotate(45deg);
+		    -ms-transform: rotate(45deg);
+		        transform: rotate(45deg);
+	}
+	
+	.navbar-toggler-btn-x .navbar-toggler-btn:after{
+		-webkit-transform: rotate(-45deg);
+		    -ms-transform: rotate(-45deg);
+		        transform: rotate(-45deg);
+	}
+	
+	.navbar-toggler-btn-x .navbar-toggler-btn:before,.navbar-toggler-btn-x .navbar-toggler-btn:after{
+		top: 0;
+	}
+	
+	#navbar-container {
+		position: relative;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+	}
+	
+	#nav-items {
+		position: absolute;
+    	top: 60px;
+    	left: 0;
+    	width: 100%;
+	}
+	
+	#nav-items ul{
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		font-size: 25px;
+	}
+	
+	.nav-items-ul {
+		overflow: hidden;
+		max-height: 0;
+		-webkit-transition: all .5s ease-in-out;
+		-o-transition: all .5s ease-in-out;
+		transition: all .5s ease-in-out;
+        background-color: rgba(240, 240, 240, 0.9);
+        -webkit-box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+                box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+	}
+	
+	.nav-items-height {
+		max-height: 250px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	
+	.nav-items-ul li {
+		margin: 10px 0;
+	}
+}

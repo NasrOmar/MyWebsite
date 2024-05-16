@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+
+#header {
+	width: 100%;
+	height: 100vh;
+	background-color: #232323;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	text-align: center;
+}
+
+#first, #second {
+	display: inline-block;
+}
+
+.text {
+	color: #FFFFFF;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-size: 42px;
+	font-weight: 300;
+}
+
+.text::after {
+	content: "_"; /* can be changed to "|" */
+	margin-right: -21px; /* half the font-size to be added here in order not to add the width of the content to the text */
+	-webkit-animation: cursor-blink infinite;
+	        animation: cursor-blink infinite;
+	-webkit-animation-duration: .5s;
+	        animation-duration: .5s;
+	-webkit-animation-timing-function: steps(1, end);
+	        animation-timing-function: steps(1, end);
+}
+
+@-webkit-keyframes cursor-blink {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	0% {
+		opacity: 0;
+	}
+}
+
+@keyframes cursor-blink {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	0% {
+		opacity: 0;
+	}
+}
+
+.second {
+	color: #EF4F51;
+	font-weight: 400;
+}

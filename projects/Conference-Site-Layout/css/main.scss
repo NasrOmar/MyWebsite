@@ -1,0 +1,306 @@
+/* Scss Document */
+
+@import "container-row-column";
+@import "colours";
+@import "typography";
+@import "spacing";
+
+
+/* Navbar */
+#navbar {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 3;
+}
+
+#navbar-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	font-size: $text-ml;
+	padding: $space-sd;
+	background-color: $color-primary;
+}
+
+#logo a {
+	text-decoration: none;
+	color: $color-text-link;
+}
+
+#navbar-toggler {
+	display: none;
+}
+
+.nav-items-ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	list-style-type: none;
+}
+
+.nav-links {
+	display: block;
+	text-decoration: none;
+	color: $color-text-link;
+	margin: 0 $space-sd;
+	-webkit-transition: color .2s ease-out;
+	-o-transition: color .2s ease-out;
+	transition: color .2s ease-out;
+}
+
+.nav-links:hover {
+	color: $color-text-link-hover;
+}
+
+.nav-links-active {
+	color: $color-text-footer-hover;
+}
+
+
+/* header margin-bottom due to fixed top navbar */
+#header {
+	margin-bottom: 60.625px;
+}
+
+
+/* Footer */
+#footer {
+	background-color: $color-footer;
+}
+
+.footer-items {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	width: 100%;
+	text-align: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	padding: $space-md;
+}
+
+.footer-links {
+	text-decoration: none;
+	color: $color-text-footer;
+	-webkit-transition: color .2s ease-out;
+	-o-transition: color .2s ease-out;
+	transition: color .2s ease-out;
+	padding: $space-md $space-lg;
+}
+
+.footer-new-line {
+	-ms-flex-preferred-size: 100%;
+	    flex-basis: 100%;
+	width: 100%;
+}
+
+.footer-links:hover {
+	color: $color-text-footer-hover;
+}
+
+
+/* All a links in body main */
+body main a {
+	text-decoration: none;
+	color: $color-text-link;
+}
+
+body main a:hover {
+	color: $color-text-link-hover;
+}
+
+/* Media Query lg - Min-Width: 1400px */
+@media screen and (min-width: 1400px) {
+	
+	/* header margin-bottom due to fixed top navbar */
+	#header {
+		margin-bottom: 88.8125px;
+	}
+}
+
+
+/* Media Query ml - Min-Width: 1200px */
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+	
+	/* header margin-bottom due to fixed top navbar */
+	#header {
+		margin-bottom: 73.1562px;
+	}
+}
+
+
+/* Media Query sm - Max-width: 1023px */
+@media screen and (max-width: 1023px) {
+	
+	/* header margin-bottom due to fixed top navbar */
+	#header {
+		margin-bottom: 51.0312px;
+	}
+}
+
+
+/* Media Query sd - Max-Width: 768px */
+@media screen and (max-width: 768px) {
+	
+	/* header margin-bottom due to fixed top navbar */
+	#header {
+		margin-bottom: 43.375px;
+	}
+}
+
+
+/* Media Query sd - Max-Width: 768px -- for Navbar Toggler */
+@media screen and (max-width: 768px) {
+	
+	/* Navbar incl Toggler */
+	#navbar-toggler {
+		display: inline-block;
+		position: relative;
+		cursor: pointer;
+		padding: $space-sd 0;
+	}
+	
+	.navbar-toggler-btn {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 5px;
+		background-color: $color-text-link;
+		border-radius: 10px;
+		-webkit-transition: all .2s ease-out;
+		-o-transition: all .2s ease-out;
+		transition: all .2s ease-out;
+	}
+
+	.navbar-toggler-btn:before,.navbar-toggler-btn:after {
+		display: block;
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		background-color: $color-text-link;
+		border-radius: 10px;
+		-webkit-transition: all .2s ease-out;
+		-o-transition: all .2s ease-out;
+		transition: all .2s ease-out;
+	}
+
+	.navbar-toggler-btn:before {
+		top: 10px;
+	}
+
+	.navbar-toggler-btn:after {
+		top: -10px;
+	}
+	
+	.navbar-toggler-btn-x .navbar-toggler-btn {
+		background: transparent;
+	}
+	
+	.navbar-toggler-btn-x .navbar-toggler-btn:before {
+		-webkit-transform: rotate(45deg);
+		    -ms-transform: rotate(45deg);
+		        transform: rotate(45deg);
+	}
+	
+	.navbar-toggler-btn-x .navbar-toggler-btn:after{
+		-webkit-transform: rotate(-45deg);
+		    -ms-transform: rotate(-45deg);
+		        transform: rotate(-45deg);
+	}
+	
+	.navbar-toggler-btn-x .navbar-toggler-btn:before,.navbar-toggler-btn-x .navbar-toggler-btn:after{
+		top: 0;
+	}
+	
+	#navbar-container {
+		position: relative;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+		padding-left: $space-lg;
+		padding-right: $space-lg;
+	}
+	
+	#nav-items {
+		position: absolute;
+    	top: 0px;
+    	left: 0;
+    	width: 100%;
+	}
+	
+	#nav-items-ul {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		position: absolute;
+		top: 42.375px;
+		left: 0;
+		width: 100%;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+	}
+	
+	.nav-items-ul {
+		overflow: hidden;
+		max-height: 0;
+		-webkit-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+        background-color: $color-primary;
+	}
+	
+	.nav-items-height {
+		max-height: 250px;
+		padding: $space-sd 0;
+	}
+	
+	.nav-links {
+		margin: $space-xs 0;
+	}
+}
+
+
+/* Media Query xs - Max-Width - 480px -- for Footer */
+@media screen and (max-width: 480px) {
+	
+	/* Footer */
+	.footer-items {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		font-size: $text-md;
+	}
+}

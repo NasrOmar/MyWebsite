@@ -1,0 +1,69 @@
+/* Scss Document */
+
+@import "main";
+
+/* From Colours SCSS
+Main Colours for Backgrounds
+$color-primary: #FFFFFF;
+$color-secondary: #EFF4F2;
+$color-footer: #1E1B18;
+
+Font Colours
+$color-text-primary: #1E1B18;
+$color-text-secondary: #FFFAFF;
+$color-text-footer: #FFFAFF;
+$color-text-footer-hover: #3E92CC; To be used for nav-links-active
+$color-text-heading: #D8315B; To be used for nav-links as well
+$color-text-link: #D8315B;
+$color-text-link-hover: #B42247;
+
+Colour Schemes
+$mustard-yellow: #F4D35E;
+$light-pink: #DA4167;
+$dark-blue: #083D77;
+$light-black: #2E4057;
+$beige: #F6D8AE;
+$light-orange: #FBA470;
+*/
+
+
+/* Banner */
+#banner {
+	width: 100%;
+	background-color: $color-secondary;
+	padding: $space-lg;
+	text-align: center;
+	margin-bottom: $space-lg;
+}
+
+
+/* Sponsor Title and Logo */
+.sponsors-title {
+	margin-top: $space-lg;
+}
+
+.main-sponsors-logo {
+	max-width: 350px;
+	margin: $space-md auto 0;
+}
+
+.sponsors-logo {
+	max-width: 300px;
+	margin: $space-md auto 0;
+}
+
+
+/* Main Content */
+.main-content {
+	margin-bottom: $space-lg;
+}
+
+
+/* Media Query - Max-Width: 768px */
+@media screen and (max-width: 768px) {
+	
+	/* sd-none class to display as none */
+	.sd-none {
+		display: none;
+	}
+}

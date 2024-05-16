@@ -1,0 +1,117 @@
+/* Scss Document */
+
+@import "main";
+
+/* From Colours SCSS
+Main Colours for Backgrounds
+$color-primary: #FFFFFF;
+$color-secondary: #EFF4F2;
+$color-footer: #1E1B18;
+
+Font Colours
+$color-text-primary: #1E1B18;
+$color-text-secondary: #FFFAFF;
+$color-text-footer: #FFFAFF;
+$color-text-footer-hover: #3E92CC; To be used for nav-links-active
+$color-text-heading: #D8315B; To be used for nav-links as well
+$color-text-link: #D8315B;
+$color-text-link-hover: #B42247;
+
+Colour Schemes
+$mustard-yellow: #F4D35E;
+$light-pink: #DA4167;
+$dark-blue: #083D77;
+$light-black: #2E4057;
+$beige: #F6D8AE;
+$light-orange: #FBA470;
+*/
+
+
+/* Banner */
+#banner {
+	width: 100%;
+	background-color: $color-secondary;
+	padding: $space-lg;
+	margin-bottom: $space-lg;
+}
+
+.banner-content {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+	flex-wrap: wrap;
+}
+
+.banner-content-details {
+	padding: $space-sd 0;
+}
+
+.banner-content-details h1 {
+	text-align: center;
+}
+
+.banner-content img {
+	max-width: 300px;
+	border-radius: 5px;
+	box-shadow:rgba(0, 0, 0, 0.2) 0px 0px 10px 0px;
+}
+
+
+/* Main Content */
+.main-content {
+	margin-bottom: $space-ml;
+}
+
+.main-content h1, .main-content h3 {
+	color: $color-text-heading;
+	margin: 0 8%;
+}
+
+.main-content h3 {
+	padding-bottom: $space-xs;
+}
+
+.main-content p {
+	padding-top: $space-xs;
+	padding-bottom: $space-md;
+	margin: 0 16%;
+}
+
+/* Section Background Primary */
+.background-primary {
+	padding: $space-md 0;
+	background-color: $color-primary;
+}
+
+/* Section Background Secondary */
+.background-secondary {
+	padding: $space-md 0;
+	background-color: $color-secondary;
+	border-radius: 8px;
+}
+
+
+/* Bullet Points */
+.bullet-point {
+	list-style-type: disc;
+	padding-bottom: $space-md;
+	margin: 0 20%;
+}
+.bullet-point li {
+	padding: $space-xs 0;
+}
+
+/* Media Query - Max-width: 480px */
+@media screen and (max-width: 480px) {
+	
+	/* Main Content */
+	.main-content h1 {
+		color: $color-text-heading;
+		margin: 0 4%;
+	}
+
+	.main-content p {
+		margin: 0 8%;
+	}
+}

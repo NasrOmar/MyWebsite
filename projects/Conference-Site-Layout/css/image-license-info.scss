@@ -1,0 +1,13 @@
+/* Scss Document */
+
+@import "main";
+
+.image-license {
+	width: 100%;
+	background-color: $color-secondary;
+	padding: $space-lg;
+}
+
+.image-license h3 {
+	margin: $space-sd 0;
+}

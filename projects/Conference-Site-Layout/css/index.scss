@@ -1,0 +1,174 @@
+/* Scss Document */
+
+@import "main";
+
+/* From Colours SCSS
+Main Colours for Backgrounds
+$color-primary: #FFFFFF;
+$color-secondary: #EFF4F2;
+$color-footer: #1E1B18;
+
+Font Colours
+$color-text-primary: #1E1B18;
+$color-text-secondary: #FFFAFF;
+$color-text-footer: #FFFAFF;
+$color-text-footer-hover: #3E92CC; To be used for nav-links-active
+$color-text-heading: #D8315B; To be used for nav-links as well
+$color-text-link: #D8315B;
+$color-text-link-hover: #B42247;
+
+Colour Schemes
+$mustard-yellow: #F4D35E;
+$light-pink: #DA4167;
+$dark-blue: #083D77;
+$light-black: #2E4057;
+$beige: #F6D8AE;
+$light-orange: #FBA470;
+*/
+
+/* Banner */
+#banner {
+	width: 100%;
+}
+
+#banner-image {
+	height: 800px;
+	background-image: url("../imgs/index-banner.jpg");
+	background-size: cover;
+	background-position: center;
+	margin: 0 auto;
+}
+
+#banner-content {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: $color-text-heading;
+    background-color: rgba(255,255,255,0.8);
+    width: 75%;
+    margin: 0 auto;
+	padding: $space-sd;
+	text-align: center;
+}
+
+
+/* Main Content */
+.main-content {
+	width: 100%;
+	background-color: $color-secondary;
+	margin-bottom: $space-lg;
+}
+
+.main-content h1 {
+	color: $color-text-heading;
+	margin: 0 8%;
+}
+
+.main-content h3 {
+	margin: 0 16%;
+	padding-bottom: $space-sd;
+}
+
+
+/* Speakers Section */
+.speakers {
+	display: block;
+	padding: $space-sd;
+	color: $color-text-secondary;
+	margin-bottom: 22px;
+	-webkit-transition: background-color .2s ease-in-out;
+	-o-transition: background-color .2s ease-in-out;
+	transition: background-color .2s ease-in-out;
+}
+
+.speakers:hover{
+	color: $color-text-secondary;
+	background-color: $light-black;
+}
+
+/* Speakers Colours */
+.light-pink {
+	background-color: $light-pink;
+}
+.beige {
+	background-color: $beige;
+	color: $color-text-primary;
+}
+.mustard-yellow {
+	background-color: $mustard-yellow;
+	color: $color-text-primary;
+}
+.light-orange {
+	background-color: $light-orange;
+}
+
+
+/* More Information */
+.more-info {
+	background-color: $color-secondary;
+	border-radius: 5px;
+	margin: $space-ml 0;
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+	        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+	padding: $space-md;
+}
+
+.more-info h4 {
+	padding: $space-sd;
+}
+
+.more-info a {
+	display: inline-block;
+	padding: $space-sd;
+	background-color: $dark-blue;
+	color: $color-text-secondary;
+	border-radius: 20px;
+	-webkit-box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.26);
+	        box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.26);
+	-webkit-transition: background-color .1s ease-in;
+	-o-transition: background-color .1s ease-in;
+	transition: background-color .1s ease-in;
+}
+
+.more-info a:hover {
+	background-color: $light-pink;
+	color: $color-text-secondary;
+}
+
+
+/* Media Query - Max-Width: 768px */
+@media screen and (max-width: 768px) {
+	
+	/* Banner */
+	#banner-image {
+		height: 400px;
+	}
+}
+
+
+/* Media Query - Max-Width: 480px */
+@media screen and (max-width: 480px) {
+	
+	/* Main Content */
+	.main-content h1 {
+		margin: 0 4%;
+	}
+	
+	.main-content h3 {
+		margin: 0 8%;
+		font-size: $text-heading-xs;
+	}
+	
+	
+	/* Speakers Section */
+	.speakers {
+		margin-bottom: 11px;
+	}
+}

@@ -1,0 +1,125 @@
+/* Scss Document */
+
+@import "main";
+
+/* From Colours SCSS
+Main Colours for Backgrounds
+$color-primary: #FFFFFF;
+$color-secondary: #EFF4F2;
+$color-footer: #1E1B18;
+
+Font Colours
+$color-text-primary: #1E1B18;
+$color-text-secondary: #FFFAFF;
+$color-text-footer: #FFFAFF;
+$color-text-footer-hover: #3E92CC; To be used for nav-links-active
+$color-text-heading: #D8315B; To be used for nav-links as well
+$color-text-link: #D8315B;
+$color-text-link-hover: #B42247;
+
+Colour Schemes
+$mustard-yellow: #F4D35E;
+$light-pink: #DA4167;
+$dark-blue: #083D77;
+$light-black: #2E4057;
+$beige: #F6D8AE;
+$light-orange: #FBA470;
+*/
+
+
+/* Banner */
+#banner {
+	width: 100%;
+	background-color: $color-secondary;
+	padding: $space-lg;
+	text-align: center;
+	margin-bottom: $space-lg;
+}
+
+
+/* Schedule List */
+.schedule-list {
+	width: 100%;
+	margin: 0 auto;
+	list-style-type: none;
+	margin-bottom: $space-lg;
+	padding: $space-lg 0;
+	display: flex;
+    flex-direction: column;
+}
+
+.schedule-list li {
+	padding: $space-md $space-md $space-lg;
+    border-top: 3px solid;
+	border-color: $color-text-primary;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.schedule-list li h4:nth-child(2) {
+	margin: 0 35% 0 0;
+}
+
+.schedule-list li h4 time {
+	padding-right: $space-lg * 2;
+}
+
+.schedule-list li a {
+	flex-basis: 100%;
+    margin-left: 40%;
+	margin-top: $space-xs;
+}
+
+/* Schedule List Border Colours */
+.schedule-list .light-pink{
+	border-color: $light-pink;
+}
+.schedule-list .light-pink time {
+	color: $light-pink;
+}
+.schedule-list .light-black {
+	border-color: $light-black;
+}
+.schedule-list .light-black time {
+	color: $light-black;
+}
+.schedule-list .mustard-yellow {
+	border-color: $mustard-yellow;
+}
+.schedule-list .mustard-yellow time {
+	color: $mustard-yellow;
+}
+.schedule-list .dark-blue {
+	border-color: $dark-blue;
+}
+.schedule-list .dark-blue time {
+	color: $dark-blue;
+}
+.schedule-list .beige {
+	border-color: $beige;
+}
+.schedule-list .beige time {
+	color: $beige;
+}
+.schedule-list .light-orange {
+	border-color: $light-orange;
+}
+.schedule-list .light-orange time {
+	color: $light-orange;
+}
+
+
+/* Media Query - Max-width: 480px */
+@media screen and (max-width: 480px) {
+	
+	/* Schedule List */
+	.schedule-list li h4:nth-child(2) {
+		margin: 0;
+	}
+	
+	.schedule-list li a {
+		margin-left: 0;
+		text-align: center;
+	}
+}

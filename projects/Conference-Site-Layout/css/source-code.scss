@@ -1,0 +1,61 @@
+/* Scss Document */
+
+@import "main";
+
+#banner {
+	width: 100%;
+	background-color: $color-secondary;
+	padding: $space-lg;
+	text-align: center;
+	margin-bottom: $space-md;
+}
+
+
+/* Download Instructions Section */
+.download-instructions h3 {
+	color: $color-text-heading;
+}
+
+
+/* Download Instructions List */
+.ul-root-folder {
+	padding: $space-md 0;
+	color: $color-text-heading
+}
+
+.ul-root-folder-content {
+	padding: $space-sd $space-md;
+	color: $color-text-primary;
+}
+
+.ul-root-subfolder {
+	padding: $space-sd $space-md;
+	color: $color-text-heading;
+	list-style-type: disc;
+}
+
+.ul-root-subfolder-content {
+	padding: $space-sd $space-md;
+	color: $color-text-primary;
+	list-style-type: circle;
+}
+
+
+/* Download Files Section */
+.download-files h3 {
+	color: $color-text-heading;
+	padding-bottom: $space-xs;
+}
+
+.download-files p {
+	padding-bottom: $space-md;
+}
+
+
+/* Background Secondary */
+.background-secondary {
+	background-color: $color-secondary;
+	padding: $space-md 0;
+	border-radius: 8px;
+	margin: 0 11px $space-lg;
+}

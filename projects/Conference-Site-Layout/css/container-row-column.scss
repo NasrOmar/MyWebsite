@@ -1,0 +1,648 @@
+/* Scss Document */
+
+/*
+Screen Resolutions:
+xs - max-width: 480px ------------------------ (0px - 480px) ----------- Extra Small
+sd - max-width: 768px ------------------------ (481px - 768px) --------- Small Device
+sm - max-width: 1023px ----------------------- (765px - 1023px) -------- Small to Medium
+md - Default : 1024px - 1199px --------------- (1024px - 1199px) ------- Medium Device
+ml - min-width: 1200px and max-width: 1399px - (1200px - 1399px) ------- Medium to Large
+lg - min-width: 1400px ----------------------- (1400px - upwards) ------ Large
+*/
+
+/* All Elements * */
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* container class */
+.container {
+  	padding: 0 15px;
+	margin: 0 auto;
+}
+
+
+/* max width 1400px */
+.max-width {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+
+/* row class to be used when using col-*-* */
+.row {
+	margin: 0 -11px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+
+
+/* row class but with full width */
+.row-full-width {
+	margin: 0 -15px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+
+/* column class to be used instead of row class to change flex-direction only */
+.column {
+	margin: 0 -11px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+
+/* column class with full width */
+.column-full-width {
+	margin: 0 -15px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+
+/* for usage with row or column classes to specify justify-content-center */
+.justify-center {
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+/* for usage with row or column classes to specify justify-content-center */
+.text-center {
+	text-align: center;
+}
+
+
+/* Column Width Variable */
+$col-width: 8.333333333333333%; /* 1 Column Width = 100% / 12 */
+
+
+/* Column Width md - Default */
+.col-md-1 {
+	padding: 0 11px;
+	max-width: $col-width;
+	-ms-flex-preferred-size: $col-width;
+	    flex-basis: $col-width;
+}
+
+.col-md-2 {
+	padding: 0 11px;
+	max-width: $col-width * 2;
+	-ms-flex-preferred-size: $col-width * 2;
+	    flex-basis: $col-width * 2;
+}
+
+.col-md-3 {
+	padding: 0 11px;
+	max-width: $col-width * 3;
+	-ms-flex-preferred-size: $col-width * 3;
+	    flex-basis: $col-width * 3;
+}
+
+.col-md-4 {
+	padding: 0 11px;
+	max-width: $col-width * 4;
+	-ms-flex-preferred-size: $col-width * 4;
+	    flex-basis: $col-width * 4;
+}
+
+.col-md-5 {
+	padding: 0 11px;
+	max-width: $col-width * 5;
+	-ms-flex-preferred-size: $col-width * 5;
+	    flex-basis: $col-width * 5;
+}
+
+.col-md-6 {
+	padding: 0 11px;
+	max-width: $col-width * 6;
+	-ms-flex-preferred-size: $col-width * 6;
+	    flex-basis: $col-width * 6;
+}
+
+.col-md-7 {
+	padding: 0 11px;
+	max-width: $col-width * 7;
+	-ms-flex-preferred-size: $col-width * 7;
+	    flex-basis: $col-width * 7;
+}
+
+.col-md-8 {
+	padding: 0 11px;
+	max-width: $col-width * 8;
+	-ms-flex-preferred-size: $col-width * 8;
+	    flex-basis: $col-width * 8;
+}
+
+.col-md-9 {
+	padding: 0 11px;
+	max-width: $col-width * 9;
+	-ms-flex-preferred-size: $col-width * 9;
+	    flex-basis: $col-width * 9;
+}
+
+.col-md-10 {
+	padding: 0 11px;
+	max-width: $col-width * 10;
+	-ms-flex-preferred-size: $col-width * 10;
+	    flex-basis: $col-width * 10;
+}
+	
+.col-md-11 {
+	padding: 0 11px;
+	max-width: $col-width * 11;
+	-ms-flex-preferred-size: $col-width * 11;
+	    flex-basis: $col-width * 11;
+}
+
+.col-md-12 {
+	padding: 0 11px;
+	max-width: $col-width * 12;
+	-ms-flex-preferred-size: $col-width * 12;
+	    flex-basis: $col-width * 12;
+}
+
+
+/* To be used if columns are required without any padding */
+.col-no-padding {
+	padding: 0;
+}
+
+/* Media Query lg - Min-Width: 1400px */
+@media screen and (min-width: 1400px) {
+	
+	/* Column Width lg */
+	.col-lg-1 {
+		padding: 0 11px;
+		max-width: $col-width;
+		-ms-flex-preferred-size: $col-width;
+		    flex-basis: $col-width;
+	}
+	
+	.col-lg-2 {
+		padding: 0 11px;
+		max-width: $col-width * 2;
+		-ms-flex-preferred-size: $col-width * 2;
+		    flex-basis: $col-width * 2;
+	}
+	
+	.col-lg-3 {
+		padding: 0 11px;
+		max-width: $col-width * 3;
+		-ms-flex-preferred-size: $col-width * 3;
+		    flex-basis: $col-width * 3;
+	}
+	
+	.col-lg-4 {
+		padding: 0 11px;
+		max-width: $col-width * 4;
+		-ms-flex-preferred-size: $col-width * 4;
+		    flex-basis: $col-width * 4;
+	}
+	
+	.col-lg-5 {
+		padding: 0 11px;
+		max-width: $col-width * 5;
+		-ms-flex-preferred-size: $col-width * 5;
+		    flex-basis: $col-width * 5;
+	}
+	
+	.col-lg-6 {
+		padding: 0 11px;
+		max-width: $col-width * 6;
+		-ms-flex-preferred-size: $col-width * 6;
+		    flex-basis: $col-width * 6;
+	}
+	
+	.col-lg-7 {
+		padding: 0 11px;
+		max-width: $col-width * 7;
+		-ms-flex-preferred-size: $col-width * 7;
+		    flex-basis: $col-width * 7;
+	}
+	
+	.col-lg-8 {
+		padding: 0 11px;
+		max-width: $col-width * 8;
+		-ms-flex-preferred-size: $col-width * 8;
+		    flex-basis: $col-width * 8;
+	}
+	
+	.col-lg-9 {
+		padding: 0 11px;
+		max-width: $col-width * 9;
+		-ms-flex-preferred-size: $col-width * 9;
+		    flex-basis: $col-width * 9;
+	}
+	
+	.col-lg-10 {
+		padding: 0 11px;
+		max-width: $col-width * 10;
+		-ms-flex-preferred-size: $col-width * 10;
+		    flex-basis: $col-width * 10;
+	}
+	
+	.col-lg-11 {
+		padding: 0 11px;
+		max-width: $col-width * 11;
+		-ms-flex-preferred-size: $col-width * 11;
+		    flex-basis: $col-width * 11;
+	}
+	
+	.col-lg-12 {
+		padding: 0 11px;
+		max-width: $col-width * 12;
+		-ms-flex-preferred-size: $col-width * 12;
+		    flex-basis: $col-width * 12;
+	}
+}
+
+
+/* Media Query ml - Min-Width: 1200px */
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+	
+	/* Column Width ml */
+	.col-ml-1 {
+		padding: 0 11px;
+		max-width: $col-width;
+		-ms-flex-preferred-size: $col-width;
+		    flex-basis: $col-width;
+	}
+	
+	.col-ml-2 {
+		padding: 0 11px;
+		max-width: $col-width * 2;
+		-ms-flex-preferred-size: $col-width * 2;
+		    flex-basis: $col-width * 2;
+	}
+	
+	.col-ml-3 {
+		padding: 0 11px;
+		max-width: $col-width * 3;
+		-ms-flex-preferred-size: $col-width * 3;
+		    flex-basis: $col-width * 3;
+	}
+	
+	.col-ml-4 {
+		padding: 0 11px;
+		max-width: $col-width * 4;
+		-ms-flex-preferred-size: $col-width * 4;
+		    flex-basis: $col-width * 4;
+	}
+	
+	.col-ml-5 {
+		padding: 0 11px;
+		max-width: $col-width * 5;
+		-ms-flex-preferred-size: $col-width * 5;
+		    flex-basis: $col-width * 5;
+	}
+	
+	.col-ml-6 {
+		padding: 0 11px;
+		max-width: $col-width * 6;
+		-ms-flex-preferred-size: $col-width * 6;
+		    flex-basis: $col-width * 6;
+	}
+	
+	.col-ml-7 {
+		padding: 0 11px;
+		max-width: $col-width * 7;
+		-ms-flex-preferred-size: $col-width * 7;
+		    flex-basis: $col-width * 7;
+	}
+	
+	.col-ml-8 {
+		padding: 0 11px;
+		max-width: $col-width * 8;
+		-ms-flex-preferred-size: $col-width * 8;
+		    flex-basis: $col-width * 8;
+	}
+	
+	.col-ml-9 {
+		padding: 0 11px;
+		max-width: $col-width * 9;
+		-ms-flex-preferred-size: $col-width * 9;
+		    flex-basis: $col-width * 9;
+	}
+	
+	.col-ml-10 {
+		padding: 0 11px;
+		max-width: $col-width * 10;
+		-ms-flex-preferred-size: $col-width * 10;
+		    flex-basis: $col-width * 10;
+	}
+	
+	.col-ml-11 {
+		padding: 0 11px;
+		max-width: $col-width * 11;
+		-ms-flex-preferred-size: $col-width * 11;
+		    flex-basis: $col-width * 11;
+	}
+	
+	.col-ml-12 {
+		padding: 0 11px;
+		max-width: $col-width * 12;
+		-ms-flex-preferred-size: $col-width * 12;
+		    flex-basis: $col-width * 12;
+	}
+}
+
+
+/* Media Query sm - Max-width: 1023px */
+@media screen and (max-width: 1023px) {
+	
+	/* Column Width sm */
+	.col-sm-1 {
+		padding: 0 11px;
+		max-width: $col-width;
+		-ms-flex-preferred-size: $col-width;
+		    flex-basis: $col-width;
+	}
+	
+	.col-sm-2 {
+		padding: 0 11px;
+		max-width: $col-width * 2;
+		-ms-flex-preferred-size: $col-width * 2;
+		    flex-basis: $col-width * 2;
+	}
+	
+	.col-sm-3 {
+		padding: 0 11px;
+		max-width: $col-width * 3;
+		-ms-flex-preferred-size: $col-width * 3;
+		    flex-basis: $col-width * 3;
+	}
+	
+	.col-sm-4 {
+		padding: 0 11px;
+		max-width: $col-width * 4;
+		-ms-flex-preferred-size: $col-width * 4;
+		    flex-basis: $col-width * 4;
+	}
+	
+	.col-sm-5 {
+		padding: 0 11px;
+		max-width: $col-width * 5;
+		-ms-flex-preferred-size: $col-width * 5;
+		    flex-basis: $col-width * 5;
+	}
+	
+	.col-sm-6 {
+		padding: 0 11px;
+		max-width: $col-width * 6;
+		-ms-flex-preferred-size: $col-width * 6;
+		    flex-basis: $col-width * 6;
+	}
+	
+	.col-sm-7 {
+		padding: 0 11px;
+		max-width: $col-width * 7;
+		-ms-flex-preferred-size: $col-width * 7;
+		    flex-basis: $col-width * 7;
+	}
+	
+	.col-sm-8 {
+		padding: 0 11px;
+		max-width: $col-width * 8;
+		-ms-flex-preferred-size: $col-width * 8;
+		    flex-basis: $col-width * 8;
+	}
+	
+	.col-sm-9 {
+		padding: 0 11px;
+		max-width: $col-width * 9;
+		-ms-flex-preferred-size: $col-width * 9;
+		    flex-basis: $col-width * 9;
+	}
+	
+	.col-sm-10 {
+		padding: 0 11px;
+		max-width: $col-width * 10;
+		-ms-flex-preferred-size: $col-width * 10;
+		    flex-basis: $col-width * 10;
+	}
+	
+	.col-sm-11 {
+		padding: 0 11px;
+		max-width: $col-width * 11;
+		-ms-flex-preferred-size: $col-width * 11;
+		    flex-basis: $col-width * 11;
+	}
+	
+	.col-sm-12 {
+		padding: 0 11px;
+		max-width: $col-width * 12;
+		-ms-flex-preferred-size: $col-width * 12;
+		    flex-basis: $col-width * 12;
+	}
+}
+
+
+/* Media Query sd - Max-Width: 768px */
+@media screen and (max-width: 768px) {
+	
+	/* Column Width sd */
+	.col-sd-1 {
+		padding: 0 11px;
+		max-width: $col-width;
+		-ms-flex-preferred-size: $col-width;
+		    flex-basis: $col-width;
+	}
+	
+	.col-sd-2 {
+		padding: 0 11px;
+		max-width: $col-width * 2;
+		-ms-flex-preferred-size: $col-width * 2;
+		    flex-basis: $col-width * 2;
+	}
+	
+	.col-sd-3 {
+		padding: 0 11px;
+		max-width: $col-width * 3;
+		-ms-flex-preferred-size: $col-width * 3;
+		    flex-basis: $col-width * 3;
+	}
+	
+	.col-sd-4 {
+		padding: 0 11px;
+		max-width: $col-width * 4;
+		-ms-flex-preferred-size: $col-width * 4;
+		    flex-basis: $col-width * 4;
+	}
+	
+	.col-sd-5 {
+		padding: 0 11px;
+		max-width: $col-width * 5;
+		-ms-flex-preferred-size: $col-width * 5;
+		    flex-basis: $col-width * 5;
+	}
+	
+	.col-sd-6 {
+		padding: 0 11px;
+		max-width: $col-width * 6;
+		-ms-flex-preferred-size: $col-width * 6;
+		    flex-basis: $col-width * 6;
+	}
+	
+	.col-sd-7 {
+		padding: 0 11px;
+		max-width: $col-width * 7;
+		-ms-flex-preferred-size: $col-width * 7;
+		    flex-basis: $col-width * 7;
+	}
+	
+	.col-sd-8 {
+		padding: 0 11px;
+		max-width: $col-width * 8;
+		-ms-flex-preferred-size: $col-width * 8;
+		    flex-basis: $col-width * 8;
+	}
+	
+	.col-sd-9 {
+		padding: 0 11px;
+		max-width: $col-width * 9;
+		-ms-flex-preferred-size: $col-width * 9;
+		    flex-basis: $col-width * 9;
+	}
+	
+	.col-sd-10 {
+		padding: 0 11px;
+		max-width: $col-width * 10;
+		-ms-flex-preferred-size: $col-width * 10;
+		    flex-basis: $col-width * 10;
+	}
+	
+	.col-sd-11 {
+		padding: 0 11px;
+		max-width: $col-width * 11;
+		-ms-flex-preferred-size: $col-width * 11;
+		    flex-basis: $col-width * 11;
+	}
+	
+	.col-sd-12 {
+		padding: 0 11px;
+		max-width: $col-width * 12;
+		-ms-flex-preferred-size: $col-width * 12;
+		    flex-basis: $col-width * 12;
+	}
+}
+
+
+/* Media Query xs - Max-Width: 480px */
+@media screen and (max-width: 480px) {
+	
+	/* Column Width xs */
+	.col-xs-1 {
+		padding: 0 11px;
+		max-width: $col-width;
+		-ms-flex-preferred-size: $col-width;
+		    flex-basis: $col-width;
+	}
+	
+	.col-xs-2 {
+		padding: 0 11px;
+		max-width: $col-width * 2;
+		-ms-flex-preferred-size: $col-width * 2;
+		    flex-basis: $col-width * 2;
+	}
+	
+	.col-xs-3 {
+		padding: 0 11px;
+		max-width: $col-width * 3;
+		-ms-flex-preferred-size: $col-width * 3;
+		    flex-basis: $col-width * 3;
+	}
+	
+	.col-xs-4 {
+		padding: 0 11px;
+		max-width: $col-width * 4;
+		-ms-flex-preferred-size: $col-width * 4;
+		    flex-basis: $col-width * 4;
+	}
+	
+	.col-xs-5 {
+		padding: 0 11px;
+		max-width: $col-width * 5;
+		-ms-flex-preferred-size: $col-width * 5;
+		    flex-basis: $col-width * 5;
+	}
+	
+	.col-xs-6 {
+		padding: 0 11px;
+		max-width: $col-width * 6;
+		-ms-flex-preferred-size: $col-width * 6;
+		    flex-basis: $col-width * 6;
+	}
+	
+	.col-xs-7 {
+		padding: 0 11px;
+		max-width: $col-width * 7;
+		-ms-flex-preferred-size: $col-width * 7;
+		    flex-basis: $col-width * 7;
+	}
+	
+	.col-xs-8 {
+		padding: 0 11px;
+		max-width: $col-width * 8;
+		-ms-flex-preferred-size: $col-width * 8;
+		    flex-basis: $col-width * 8;
+	}
+	
+	.col-xs-9 {
+		padding: 0 11px;
+		max-width: $col-width * 9;
+		-ms-flex-preferred-size: $col-width * 9;
+		    flex-basis: $col-width * 9;
+	}
+	
+	.col-xs-10 {
+		padding: 0 11px;
+		max-width: $col-width * 10;
+		-ms-flex-preferred-size: $col-width * 10;
+		    flex-basis: $col-width * 10;
+	}
+	
+	.col-xs-11 {
+		padding: 0 11px;
+		max-width: $col-width * 11;
+		-ms-flex-preferred-size: $col-width * 11;
+		    flex-basis: $col-width * 11;
+	}
+	
+	.col-xs-12 {
+		padding: 0 11px;
+		max-width: $col-width * 12;
+		-ms-flex-preferred-size: $col-width * 12;
+		    flex-basis: $col-width * 12;
+	}
+}

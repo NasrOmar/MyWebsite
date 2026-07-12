@@ -874,15 +874,18 @@
 
     loadConversations();
 
-    const mostRecent = sortedConversations()[0];
-    if (mostRecent) {
-      activeConversationId = mostRecent.id;
-      renderConversation();
-      renderChatList();
-      updateTopbar();
-    } else {
-      createNewConversation();
-    }
+    // Remove unused empty chats left by earlier page loads.
+    Object.keys(conversations).forEach(id => {
+      const chat = conversations[id];
+
+      if (!chat || !Array.isArray(chat.messages) || chat.messages.length === 0) {
+        delete conversations[id];
+      }
+    });
+
+    // Always greet the visitor with one fresh conversation.
+    // Previous conversations containing messages remain available in the sidebar.
+    createNewConversation();
 
     userInput.focus();
   </script>
